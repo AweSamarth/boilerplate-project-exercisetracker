@@ -1,5 +1,6 @@
-let date = new Date().toLocaleDateString("en-CA")
-console.log(date)
+const anothercheck=Date.parse(new Date())
+console.log(anothercheck)
+console. log (new Date(Number(anothercheck)).toDateString())
 
-let checking = new Date("2022-11-22").toLocaleDateString("en-CA")
-console.log(checking)
+// const thedate = Date.parse(new Date("2022-11-11"))
+// console.log(thedate)
