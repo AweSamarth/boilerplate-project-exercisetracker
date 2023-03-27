@@ -61,7 +61,10 @@ app.post("/api/users", (req, res) => {
     });
   };
   createUser();
+  res.send("working")
 });
+
+
 
 app.post("/api/users/:id/exercises", (req, res) => {
   let username, date;
