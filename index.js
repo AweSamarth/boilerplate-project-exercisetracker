@@ -41,7 +41,7 @@ app.use(cors());
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.post("/api/users", (req, res) => {
@@ -61,7 +61,6 @@ app.post("/api/users", (req, res) => {
     });
   };
   createUser();
-  res.send("working")
 });
 
 
@@ -199,3 +198,4 @@ const listener = app.listen(3000||process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
 //
+module.exports = app;
