@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser");
+app.use(express.static("public"));
 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
@@ -38,7 +39,6 @@ const Exercises = mongoose.model("Exercises", exercisesSchema);
 const Log = mongoose.model("Log", logSchema);
 
 app.use(cors());
-app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
