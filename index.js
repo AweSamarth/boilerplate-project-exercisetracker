@@ -41,7 +41,7 @@ app.use(cors());
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/views/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/api/users", (req, res) => {
@@ -192,7 +192,7 @@ app.get("/api/users/:id/logs", (req, res) => {
   });
 });
 
-const listener = app.listen(process.env.PORT, () => {
+const listener = app.listen(3000||process.env.PORT, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
 //
